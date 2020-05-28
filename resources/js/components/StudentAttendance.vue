@@ -29,12 +29,6 @@
                         </tbody>
 
                     </table>
-                    <!-- <b-form-checkbox-group id="checkbox-group" v-model="checkedStudents">
-                        <b-form-checkbox  @click>
-                            {{ student.first_name }} {{ student.last_name }}
-                            {{ student.status }}
-                        </b-form-checkbox>
-                    </b-form-checkbox-group> -->
                 </b-col>
             </b-row>
         </b-container>

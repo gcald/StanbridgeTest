@@ -19,7 +19,7 @@ class CreateStudentsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
-            $table->enum('status', ['absent', 'present']);
+            $table->enum('status', ['absent', 'present'])->default('absent');
             $table->timestamps();
         });
     }
