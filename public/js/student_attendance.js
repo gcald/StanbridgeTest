@@ -48528,7 +48528,10 @@ var render = function() {
               _c("b-col", [
                 _c(
                   "table",
-                  { staticClass: "table", attrs: { id: "student-table" } },
+                  {
+                    staticClass: "table text-center",
+                    attrs: { id: "student-table" }
+                  },
                   [
                     _c("thead", [
                       _c("tr", { attrs: { align: "center" } }, [

@@ -8,7 +8,7 @@
             </b-row>
             <b-row>
                 <b-col>
-                    <table class="table" id="student-table">
+                    <table class="table text-center" id="student-table">
                         <thead>
                             <tr align='center'>
                                 <th scope="col">Select if present</th>
