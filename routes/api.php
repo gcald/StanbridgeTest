@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Get a list of all students
+Route::get('students', 'StudentController@index');
+
+// Get a single student info
+Route::get('student/{id}', 'StudentController@show');
+
+// Update student
+Route::put('student/{id}', 'StudentController@update');
