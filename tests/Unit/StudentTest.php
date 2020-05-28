@@ -18,6 +18,19 @@ class StudentTest extends TestCase
         $this->seed();
         $response = $this->get('/api/students');
         $response->assertStatus(200);
+
+        // Test first student
+        $response->assertJsonPath("data.0.student_id", '1605092601799');
+        $response->assertJsonPath("data.0.first_name", 'Melvin');
+        $response->assertJsonPath("data.0.last_name", 'Levine');
+        $response->assertJsonPath("data.0.email", 'libero@ultricessitamet.co.uk');
+
+        // Test second student
+        $response->assertJsonPath("data.1.student_id", '1627060401499');
+        $response->assertJsonPath("data.1.first_name", 'Elaine');
+        $response->assertJsonPath("data.1.last_name", 'Donaldson');
+        $response->assertJsonPath("data.1.email", 'Morbi.vehicula@imperdiet.ca');
+
     }
 
     /** @test */
@@ -26,6 +39,11 @@ class StudentTest extends TestCase
         $this->seed();
         $response = $this->get('/api/student/1');
         $response->assertStatus(200);
+        $response->assertJsonPath("data.student_id", '1605092601799');
+        $response->assertJsonPath("data.first_name", 'Melvin');
+        $response->assertJsonPath("data.last_name", 'Levine');
+        $response->assertJsonPath("data.email", 'libero@ultricessitamet.co.uk');
+
     }
 
     /** @test */
